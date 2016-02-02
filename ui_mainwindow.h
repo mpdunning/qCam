@@ -202,7 +202,7 @@ public:
     QSpacerItem *horizontalSpacer_15;
     QSpacerItem *verticalSpacer_9;
     QWidget *Tiff;
-    QFormLayout *formLayout_9;
+    QFormLayout *formLayout_6;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_20;
     QGridLayout *gridLayout_21;
@@ -210,23 +210,18 @@ public:
     QLabel *label_68;
     QELabel *qelabel_81;
     QEComboBox *qecombobox_14;
-    QLabel *label_65;
     QELabel *qelabel_43;
-    QLabel *label_67;
     QELabel *qelabel_78;
     QELabel *qelabel_76;
     QLabel *label_72;
     QELineEdit *qelineedit_19;
-    QELabel *qelabel_79;
     QELineEdit *qelineedit_12;
     QEComboBox *qecombobox_12;
     QLabel *label_73;
     QELineEdit *qelineedit_21;
     QELabel *qelabel_82;
     QLabel *label_69;
-    QELabel *qelabel_69;
     QLabel *label_70;
-    QELabel *qelabel_73;
     QLabel *label_71;
     QLabel *label_63;
     QLabel *label_74;
@@ -238,7 +233,6 @@ public:
     QELabel *qelabel_74;
     QLabel *label_66;
     QEComboBox *qecombobox_13;
-    QLabel *label_75;
     QEComboBox *qecombobox_10;
     QHBoxLayout *horizontalLayout_5;
     QELabel *qelabel_83;
@@ -247,9 +241,15 @@ public:
     QELabel *qelabel_80;
     QELabel *qelabel_75;
     QSpacerItem *horizontalSpacer_9;
-    QGroupBox *groupBox_4;
-    QGridLayout *gridLayout_25;
     QEPushButton *qepushbutton_12;
+    QELineEdit *qelineedit_17;
+    QLabel *label_65;
+    QLabel *label_75;
+    QELineEdit *qelineedit_14;
+    QELabel *qelabel_69;
+    QLabel *label_67;
+    QELabel *qelabel_79;
+    QELabel *qelabel_73;
     QSpacerItem *horizontalSpacer_6;
     QSpacerItem *verticalSpacer_4;
     QWidget *Info;
@@ -363,7 +363,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->setEnabled(true);
-        MainWindow->resize(621, 605);
+        MainWindow->resize(623, 615);
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -422,7 +422,7 @@ public:
         qeimage_qCam->setDisplayButtonBar(true);
         qeimage_qCam->setShowTime(false);
         qeimage_qCam->setProperty("resizeOption", QVariant(QEImage::Fit));
-        qeimage_qCam->setZoom(44);
+        qeimage_qCam->setZoom(45);
         qeimage_qCam->setAutoBrightnessContrast(false);
         qeimage_qCam->setDisplayMarkups(false);
         qeimage_qCam->setProperty("programStartupOption1", QVariant(QEImage::None));
@@ -474,6 +474,7 @@ public:
 
         qelabel_12 = new QELabel(groupBox_Y);
         qelabel_12->setObjectName(QStringLiteral("qelabel_12"));
+        qelabel_12->setMinimumSize(QSize(80, 0));
 
         gridLayout_10->addWidget(qelabel_12, 0, 1, 1, 1);
 
@@ -545,6 +546,7 @@ public:
 
         qelabel_11 = new QELabel(groupBox_X);
         qelabel_11->setObjectName(QStringLiteral("qelabel_11"));
+        qelabel_11->setMinimumSize(QSize(80, 0));
 
         gridLayout_9->addWidget(qelabel_11, 0, 1, 1, 1);
 
@@ -841,7 +843,7 @@ public:
 
         label_76 = new QLabel(groupBox_11);
         label_76->setObjectName(QStringLiteral("label_76"));
-        label_76->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label_76->setAlignment(Qt::AlignCenter);
 
         gridLayout_17->addWidget(label_76, 1, 0, 1, 3);
 
@@ -1354,8 +1356,8 @@ public:
         tabWidget_qCam->addTab(Overlay, QString());
         Tiff = new QWidget();
         Tiff->setObjectName(QStringLiteral("Tiff"));
-        formLayout_9 = new QFormLayout(Tiff);
-        formLayout_9->setObjectName(QStringLiteral("formLayout_9"));
+        formLayout_6 = new QFormLayout(Tiff);
+        formLayout_6->setObjectName(QStringLiteral("formLayout_6"));
         groupBox_3 = new QGroupBox(Tiff);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         gridLayout_20 = new QGridLayout(groupBox_3);
@@ -1366,18 +1368,18 @@ public:
         qelabel_72 = new QELabel(groupBox_3);
         qelabel_72->setObjectName(QStringLiteral("qelabel_72"));
 
-        gridLayout_21->addWidget(qelabel_72, 4, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_72, 6, 2, 1, 1);
 
         label_68 = new QLabel(groupBox_3);
         label_68->setObjectName(QStringLiteral("label_68"));
         label_68->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_68, 13, 0, 1, 1);
+        gridLayout_21->addWidget(label_68, 17, 0, 1, 1);
 
         qelabel_81 = new QELabel(groupBox_3);
         qelabel_81->setObjectName(QStringLiteral("qelabel_81"));
 
-        gridLayout_21->addWidget(qelabel_81, 11, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_81, 15, 2, 1, 1);
 
         qecombobox_14 = new QEComboBox(groupBox_3);
         qecombobox_14->setObjectName(QStringLiteral("qecombobox_14"));
@@ -1385,64 +1387,42 @@ public:
         qecombobox_14->setSizePolicy(sizePolicy2);
         qecombobox_14->setSubscribe(true);
 
-        gridLayout_21->addWidget(qecombobox_14, 11, 1, 1, 1);
-
-        label_65 = new QLabel(groupBox_3);
-        label_65->setObjectName(QStringLiteral("label_65"));
-        label_65->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_21->addWidget(label_65, 2, 0, 1, 1);
+        gridLayout_21->addWidget(qecombobox_14, 15, 1, 1, 1);
 
         qelabel_43 = new QELabel(groupBox_3);
         qelabel_43->setObjectName(QStringLiteral("qelabel_43"));
 
         gridLayout_21->addWidget(qelabel_43, 1, 2, 1, 1);
 
-        label_67 = new QLabel(groupBox_3);
-        label_67->setObjectName(QStringLiteral("label_67"));
-        label_67->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_21->addWidget(label_67, 8, 0, 1, 1);
-
         qelabel_78 = new QELabel(groupBox_3);
         qelabel_78->setObjectName(QStringLiteral("qelabel_78"));
 
-        gridLayout_21->addWidget(qelabel_78, 6, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_78, 8, 2, 1, 1);
 
         qelabel_76 = new QELabel(groupBox_3);
         qelabel_76->setObjectName(QStringLiteral("qelabel_76"));
 
-        gridLayout_21->addWidget(qelabel_76, 5, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_76, 7, 2, 1, 1);
 
         label_72 = new QLabel(groupBox_3);
         label_72->setObjectName(QStringLiteral("label_72"));
         label_72->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_72, 3, 0, 1, 1);
+        gridLayout_21->addWidget(label_72, 5, 0, 1, 1);
 
         qelineedit_19 = new QELineEdit(groupBox_3);
         qelineedit_19->setObjectName(QStringLiteral("qelineedit_19"));
         sizePolicy2.setHeightForWidth(qelineedit_19->sizePolicy().hasHeightForWidth());
         qelineedit_19->setSizePolicy(sizePolicy2);
 
-        gridLayout_21->addWidget(qelineedit_19, 5, 1, 1, 1);
-
-        qelabel_79 = new QELabel(groupBox_3);
-        qelabel_79->setObjectName(QStringLiteral("qelabel_79"));
-        QSizePolicy sizePolicy6(QSizePolicy::Ignored, QSizePolicy::Preferred);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(qelabel_79->sizePolicy().hasHeightForWidth());
-        qelabel_79->setSizePolicy(sizePolicy6);
-
-        gridLayout_21->addWidget(qelabel_79, 7, 1, 1, 2);
+        gridLayout_21->addWidget(qelineedit_19, 7, 1, 1, 1);
 
         qelineedit_12 = new QELineEdit(groupBox_3);
         qelineedit_12->setObjectName(QStringLiteral("qelineedit_12"));
         sizePolicy2.setHeightForWidth(qelineedit_12->sizePolicy().hasHeightForWidth());
         qelineedit_12->setSizePolicy(sizePolicy2);
 
-        gridLayout_21->addWidget(qelineedit_12, 4, 1, 1, 1);
+        gridLayout_21->addWidget(qelineedit_12, 6, 1, 1, 1);
 
         qecombobox_12 = new QEComboBox(groupBox_3);
         qecombobox_12->setObjectName(QStringLiteral("qecombobox_12"));
@@ -1450,70 +1430,55 @@ public:
         qecombobox_12->setSizePolicy(sizePolicy2);
         qecombobox_12->setSubscribe(true);
 
-        gridLayout_21->addWidget(qecombobox_12, 6, 1, 1, 1);
+        gridLayout_21->addWidget(qecombobox_12, 8, 1, 1, 1);
 
         label_73 = new QLabel(groupBox_3);
         label_73->setObjectName(QStringLiteral("label_73"));
         label_73->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_73, 5, 0, 1, 1);
+        gridLayout_21->addWidget(label_73, 7, 0, 1, 1);
 
         qelineedit_21 = new QELineEdit(groupBox_3);
         qelineedit_21->setObjectName(QStringLiteral("qelineedit_21"));
         sizePolicy2.setHeightForWidth(qelineedit_21->sizePolicy().hasHeightForWidth());
         qelineedit_21->setSizePolicy(sizePolicy2);
 
-        gridLayout_21->addWidget(qelineedit_21, 12, 1, 1, 1);
+        gridLayout_21->addWidget(qelineedit_21, 16, 1, 1, 1);
 
         qelabel_82 = new QELabel(groupBox_3);
         qelabel_82->setObjectName(QStringLiteral("qelabel_82"));
 
-        gridLayout_21->addWidget(qelabel_82, 10, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_82, 14, 2, 1, 1);
 
         label_69 = new QLabel(groupBox_3);
         label_69->setObjectName(QStringLiteral("label_69"));
         label_69->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_69, 10, 0, 1, 1);
-
-        qelabel_69 = new QELabel(groupBox_3);
-        qelabel_69->setObjectName(QStringLiteral("qelabel_69"));
-        sizePolicy6.setHeightForWidth(qelabel_69->sizePolicy().hasHeightForWidth());
-        qelabel_69->setSizePolicy(sizePolicy6);
-        qelabel_69->setMinimumSize(QSize(445, 0));
-
-        gridLayout_21->addWidget(qelabel_69, 2, 1, 1, 2);
+        gridLayout_21->addWidget(label_69, 14, 0, 1, 1);
 
         label_70 = new QLabel(groupBox_3);
         label_70->setObjectName(QStringLiteral("label_70"));
         label_70->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_70, 11, 0, 1, 1);
-
-        qelabel_73 = new QELabel(groupBox_3);
-        qelabel_73->setObjectName(QStringLiteral("qelabel_73"));
-        sizePolicy6.setHeightForWidth(qelabel_73->sizePolicy().hasHeightForWidth());
-        qelabel_73->setSizePolicy(sizePolicy6);
-
-        gridLayout_21->addWidget(qelabel_73, 8, 1, 1, 2);
+        gridLayout_21->addWidget(label_70, 15, 0, 1, 1);
 
         label_71 = new QLabel(groupBox_3);
         label_71->setObjectName(QStringLiteral("label_71"));
         label_71->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_71, 12, 0, 1, 1);
+        gridLayout_21->addWidget(label_71, 16, 0, 1, 1);
 
         label_63 = new QLabel(groupBox_3);
         label_63->setObjectName(QStringLiteral("label_63"));
         label_63->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_63, 4, 0, 1, 1);
+        gridLayout_21->addWidget(label_63, 6, 0, 1, 1);
 
         label_74 = new QLabel(groupBox_3);
         label_74->setObjectName(QStringLiteral("label_74"));
         label_74->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_21->addWidget(label_74, 6, 0, 1, 1);
+        gridLayout_21->addWidget(label_74, 8, 0, 1, 1);
 
         qelineedit_11 = new QELineEdit(groupBox_3);
         qelineedit_11->setObjectName(QStringLiteral("qelineedit_11"));
@@ -1541,12 +1506,12 @@ public:
         gridLayout_22->addWidget(qepushbutton_7, 0, 0, 1, 1);
 
 
-        gridLayout_21->addLayout(gridLayout_22, 13, 1, 1, 1);
+        gridLayout_21->addLayout(gridLayout_22, 17, 1, 1, 1);
 
         qelabel_74 = new QELabel(groupBox_3);
         qelabel_74->setObjectName(QStringLiteral("qelabel_74"));
 
-        gridLayout_21->addWidget(qelabel_74, 3, 2, 1, 1);
+        gridLayout_21->addWidget(qelabel_74, 5, 2, 1, 1);
 
         label_66 = new QLabel(groupBox_3);
         label_66->setObjectName(QStringLiteral("label_66"));
@@ -1560,13 +1525,7 @@ public:
         qecombobox_13->setSizePolicy(sizePolicy2);
         qecombobox_13->setSubscribe(true);
 
-        gridLayout_21->addWidget(qecombobox_13, 10, 1, 1, 1);
-
-        label_75 = new QLabel(groupBox_3);
-        label_75->setObjectName(QStringLiteral("label_75"));
-        label_75->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_21->addWidget(label_75, 7, 0, 1, 1);
+        gridLayout_21->addWidget(qecombobox_13, 14, 1, 1, 1);
 
         qecombobox_10 = new QEComboBox(groupBox_3);
         qecombobox_10->setObjectName(QStringLiteral("qecombobox_10"));
@@ -1580,7 +1539,8 @@ public:
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         qelabel_83 = new QELabel(groupBox_3);
         qelabel_83->setObjectName(QStringLiteral("qelabel_83"));
-        qelabel_83->setMaximumSize(QSize(40, 16777215));
+        qelabel_83->setMinimumSize(QSize(65, 0));
+        qelabel_83->setMaximumSize(QSize(16777215, 16777215));
 
         horizontalLayout_5->addWidget(qelabel_83);
 
@@ -1589,17 +1549,17 @@ public:
         horizontalLayout_5->addItem(horizontalSpacer_8);
 
 
-        gridLayout_21->addLayout(horizontalLayout_5, 12, 2, 1, 1);
+        gridLayout_21->addLayout(horizontalLayout_5, 16, 2, 1, 1);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         qelabel_80 = new QELabel(groupBox_3);
         qelabel_80->setObjectName(QStringLiteral("qelabel_80"));
-        QSizePolicy sizePolicy7(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(qelabel_80->sizePolicy().hasHeightForWidth());
-        qelabel_80->setSizePolicy(sizePolicy7);
+        QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(qelabel_80->sizePolicy().hasHeightForWidth());
+        qelabel_80->setSizePolicy(sizePolicy6);
         qelabel_80->setMinimumSize(QSize(65, 0));
         qelabel_80->setMaximumSize(QSize(100, 16777215));
 
@@ -1607,6 +1567,7 @@ public:
 
         qelabel_75 = new QELabel(groupBox_3);
         qelabel_75->setObjectName(QStringLiteral("qelabel_75"));
+        qelabel_75->setMinimumSize(QSize(65, 0));
 
         horizontalLayout->addWidget(qelabel_75);
 
@@ -1614,39 +1575,89 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_9);
 
-
-        gridLayout_21->addLayout(horizontalLayout, 13, 2, 1, 1);
-
-        groupBox_4 = new QGroupBox(groupBox_3);
-        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        sizePolicy7.setHeightForWidth(groupBox_4->sizePolicy().hasHeightForWidth());
-        groupBox_4->setSizePolicy(sizePolicy7);
-        gridLayout_25 = new QGridLayout(groupBox_4);
-        gridLayout_25->setObjectName(QStringLiteral("gridLayout_25"));
-        qepushbutton_12 = new QEPushButton(groupBox_4);
+        qepushbutton_12 = new QEPushButton(groupBox_3);
         qepushbutton_12->setObjectName(QStringLiteral("qepushbutton_12"));
         sizePolicy5.setHeightForWidth(qepushbutton_12->sizePolicy().hasHeightForWidth());
         qepushbutton_12->setSizePolicy(sizePolicy5);
         qepushbutton_12->setMinimumSize(QSize(0, 0));
 
-        gridLayout_25->addWidget(qepushbutton_12, 0, 0, 1, 1);
+        horizontalLayout->addWidget(qepushbutton_12);
 
 
-        gridLayout_21->addWidget(groupBox_4, 14, 1, 1, 1);
+        gridLayout_21->addLayout(horizontalLayout, 17, 2, 1, 1);
+
+        qelineedit_17 = new QELineEdit(groupBox_3);
+        qelineedit_17->setObjectName(QStringLiteral("qelineedit_17"));
+        sizePolicy2.setHeightForWidth(qelineedit_17->sizePolicy().hasHeightForWidth());
+        qelineedit_17->setSizePolicy(sizePolicy2);
+
+        gridLayout_21->addWidget(qelineedit_17, 9, 1, 1, 1);
+
+        label_65 = new QLabel(groupBox_3);
+        label_65->setObjectName(QStringLiteral("label_65"));
+        label_65->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_21->addWidget(label_65, 2, 0, 1, 1);
+
+        label_75 = new QLabel(groupBox_3);
+        label_75->setObjectName(QStringLiteral("label_75"));
+        label_75->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_21->addWidget(label_75, 9, 0, 1, 1);
+
+        qelineedit_14 = new QELineEdit(groupBox_3);
+        qelineedit_14->setObjectName(QStringLiteral("qelineedit_14"));
+        sizePolicy2.setHeightForWidth(qelineedit_14->sizePolicy().hasHeightForWidth());
+        qelineedit_14->setSizePolicy(sizePolicy2);
+        qelineedit_14->setMinimumSize(QSize(440, 0));
+
+        gridLayout_21->addWidget(qelineedit_14, 2, 1, 1, 2);
+
+        qelabel_69 = new QELabel(groupBox_3);
+        qelabel_69->setObjectName(QStringLiteral("qelabel_69"));
+        QSizePolicy sizePolicy7(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(qelabel_69->sizePolicy().hasHeightForWidth());
+        qelabel_69->setSizePolicy(sizePolicy7);
+        qelabel_69->setMinimumSize(QSize(445, 0));
+
+        gridLayout_21->addWidget(qelabel_69, 3, 0, 1, 3);
+
+        label_67 = new QLabel(groupBox_3);
+        label_67->setObjectName(QStringLiteral("label_67"));
+        label_67->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_21->addWidget(label_67, 11, 0, 1, 1);
+
+        qelabel_79 = new QELabel(groupBox_3);
+        qelabel_79->setObjectName(QStringLiteral("qelabel_79"));
+        sizePolicy7.setHeightForWidth(qelabel_79->sizePolicy().hasHeightForWidth());
+        qelabel_79->setSizePolicy(sizePolicy7);
+
+        gridLayout_21->addWidget(qelabel_79, 9, 2, 1, 1);
+
+        qelabel_73 = new QELabel(groupBox_3);
+        qelabel_73->setObjectName(QStringLiteral("qelabel_73"));
+        sizePolicy7.setHeightForWidth(qelabel_73->sizePolicy().hasHeightForWidth());
+        qelabel_73->setSizePolicy(sizePolicy7);
+        qelabel_73->setMinimumSize(QSize(440, 0));
+
+        gridLayout_21->addWidget(qelabel_73, 11, 1, 1, 2);
 
 
         gridLayout_20->addLayout(gridLayout_21, 0, 0, 1, 1);
 
 
-        formLayout_9->setWidget(0, QFormLayout::LabelRole, groupBox_3);
+        formLayout_6->setWidget(0, QFormLayout::LabelRole, groupBox_3);
 
         horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        formLayout_9->setItem(0, QFormLayout::FieldRole, horizontalSpacer_6);
+        formLayout_6->setItem(0, QFormLayout::FieldRole, horizontalSpacer_6);
 
         verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        formLayout_9->setItem(1, QFormLayout::LabelRole, verticalSpacer_4);
+        formLayout_6->setItem(1, QFormLayout::LabelRole, verticalSpacer_4);
 
         tabWidget_qCam->addTab(Tiff, QString());
         Info = new QWidget();
@@ -1708,16 +1719,16 @@ public:
 
         qelabel_25 = new QELabel(groupBox_8);
         qelabel_25->setObjectName(QStringLiteral("qelabel_25"));
-        sizePolicy7.setHeightForWidth(qelabel_25->sizePolicy().hasHeightForWidth());
-        qelabel_25->setSizePolicy(sizePolicy7);
+        sizePolicy6.setHeightForWidth(qelabel_25->sizePolicy().hasHeightForWidth());
+        qelabel_25->setSizePolicy(sizePolicy6);
         qelabel_25->setMinimumSize(QSize(130, 0));
 
         gridLayout_14->addWidget(qelabel_25, 0, 2, 1, 1);
 
         label_23 = new QLabel(groupBox_8);
         label_23->setObjectName(QStringLiteral("label_23"));
-        sizePolicy7.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
-        label_23->setSizePolicy(sizePolicy7);
+        sizePolicy6.setHeightForWidth(label_23->sizePolicy().hasHeightForWidth());
+        label_23->setSizePolicy(sizePolicy6);
         label_23->setMinimumSize(QSize(130, 0));
         label_23->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -1979,8 +1990,8 @@ public:
 
         qepushbutton_5 = new QEPushButton(groupBox_6);
         qepushbutton_5->setObjectName(QStringLiteral("qepushbutton_5"));
-        sizePolicy7.setHeightForWidth(qepushbutton_5->sizePolicy().hasHeightForWidth());
-        qepushbutton_5->setSizePolicy(sizePolicy7);
+        sizePolicy6.setHeightForWidth(qepushbutton_5->sizePolicy().hasHeightForWidth());
+        qepushbutton_5->setSizePolicy(sizePolicy6);
         qepushbutton_5->setMinimumSize(QSize(80, 0));
         qepushbutton_5->setMaximumSize(QSize(10000, 16777215));
         qepushbutton_5->setConfirmAction(false);
@@ -2026,8 +2037,9 @@ public:
         label_9->setObjectName(QStringLiteral("label_9"));
         sizePolicy1.setHeightForWidth(label_9->sizePolicy().hasHeightForWidth());
         label_9->setSizePolicy(sizePolicy1);
-        label_9->setMinimumSize(QSize(60, 0));
-        label_9->setMaximumSize(QSize(100, 16777215));
+        label_9->setMinimumSize(QSize(0, 0));
+        label_9->setMaximumSize(QSize(60, 16777215));
+        label_9->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_8->addWidget(label_9);
 
@@ -2620,10 +2632,8 @@ public:
         qelabel_81->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qecombobox_14->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileWriteMode", 0)));
         qecombobox_14->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
-        label_65->setText(QApplication::translate("MainWindow", "File Path", 0));
         qelabel_43->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:EnableCallbacks_RBV", 0)));
         qelabel_43->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
-        label_67->setText(QApplication::translate("MainWindow", "Last Filename", 0));
         qelabel_78->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:AutoIncrement_RBV", 0)));
         qelabel_78->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qelabel_76->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileNumber_RBV", 0)));
@@ -2631,8 +2641,6 @@ public:
         label_72->setText(QApplication::translate("MainWindow", "File Path Exists?", 0));
         qelineedit_19->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileNumber", 0)));
         qelineedit_19->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
-        qelabel_79->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileTemplate_RBV", 0)));
-        qelabel_79->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qelineedit_12->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileName", 0)));
         qelineedit_12->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qecombobox_12->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:AutoIncrement", 0)));
@@ -2643,11 +2651,7 @@ public:
         qelabel_82->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:AutoSave_RBV", 0)));
         qelabel_82->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         label_69->setText(QApplication::translate("MainWindow", "Auto Save", 0));
-        qelabel_69->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FilePath_RBV", 0)));
-        qelabel_69->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         label_70->setText(QApplication::translate("MainWindow", "Write Mode", 0));
-        qelabel_73->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FullFileName_RBV", 0)));
-        qelabel_73->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         label_71->setText(QApplication::translate("MainWindow", "# to Capture", 0));
         label_63->setText(QApplication::translate("MainWindow", "File Name", 0));
         label_74->setText(QApplication::translate("MainWindow", "Auto Increment", 0));
@@ -2667,7 +2671,6 @@ public:
         label_66->setText(QApplication::translate("MainWindow", "Enable", 0));
         qecombobox_13->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:AutoSave", 0)));
         qecombobox_13->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
-        label_75->setText(QApplication::translate("MainWindow", "Filename Format", 0));
         qecombobox_10->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:EnableCallbacks", 0)));
         qecombobox_10->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qelabel_83->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:NumCapture_RBV", 0)));
@@ -2676,13 +2679,25 @@ public:
         qelabel_80->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qelabel_75->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:WriteFile_RBV", 0)));
         qelabel_75->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
-        groupBox_4->setTitle(QString());
         qepushbutton_12->setText(QApplication::translate("MainWindow", "Autofill", 0));
         qepushbutton_12->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         qepushbutton_12->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/autoFillTiff.sh", 0));
         qepushbutton_12->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0));
         qepushbutton_12->setProperty("guiFile", QVariant(QString()));
+        qelineedit_17->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileTemplate", 0)));
+        qelineedit_17->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
+        label_65->setText(QApplication::translate("MainWindow", "File Path", 0));
+        label_75->setText(QApplication::translate("MainWindow", "Filename Format", 0));
+        qelineedit_14->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FilePath", 0)));
+        qelineedit_14->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
+        qelabel_69->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FilePath_RBV", 0)));
+        qelabel_69->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
+        label_67->setText(QApplication::translate("MainWindow", "Last Filename", 0));
+        qelabel_79->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileTemplate_RBV", 0)));
+        qelabel_79->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
+        qelabel_73->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FullFileName_RBV", 0)));
+        qelabel_73->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         tabWidget_qCam->setTabText(tabWidget_qCam->indexOf(Tiff), QApplication::translate("MainWindow", "Tiff", 0));
         groupBox_8->setTitle(QString());
         label_81->setText(QApplication::translate("MainWindow", "PDU", 0));

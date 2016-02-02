@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>621</width>
-    <height>605</height>
+    <width>623</width>
+    <height>615</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -184,7 +184,7 @@
            <enum>QEImage::Fit</enum>
           </property>
           <property name="zoom">
-           <number>44</number>
+           <number>45</number>
           </property>
           <property name="autoBrightnessContrast">
            <bool>false</bool>
@@ -281,6 +281,12 @@
                 </item>
                 <item row="0" column="1">
                  <widget class="QELabel" name="qelabel_12">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="variable" stdset="0">
                    <string>$(P):cam1:MaxSizeY_RBV</string>
                   </property>
@@ -444,6 +450,12 @@
                 </item>
                 <item row="0" column="1">
                  <widget class="QELabel" name="qelabel_11">
+                  <property name="minimumSize">
+                   <size>
+                    <width>80</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="variable" stdset="0">
                    <string>$(P):cam1:MaxSizeX_RBV</string>
                   </property>
@@ -1047,7 +1059,7 @@
               <string>* Used in Fixed Rate Trigger Mode only.</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -2216,7 +2228,7 @@
        <attribute name="title">
         <string>Tiff</string>
        </attribute>
-       <layout class="QFormLayout" name="formLayout_9">
+       <layout class="QFormLayout" name="formLayout_6">
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox_3">
           <property name="title">
@@ -2228,7 +2240,7 @@
              <property name="sizeConstraint">
               <enum>QLayout::SetMaximumSize</enum>
              </property>
-             <item row="4" column="2">
+             <item row="6" column="2">
               <widget class="QELabel" name="qelabel_72">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:FileName_RBV</string>
@@ -2238,7 +2250,7 @@
                </property>
               </widget>
              </item>
-             <item row="13" column="0">
+             <item row="17" column="0">
               <widget class="QLabel" name="label_68">
                <property name="text">
                 <string>Capture</string>
@@ -2248,7 +2260,7 @@
                </property>
               </widget>
              </item>
-             <item row="11" column="2">
+             <item row="15" column="2">
               <widget class="QELabel" name="qelabel_81">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:FileWriteMode_RBV</string>
@@ -2258,7 +2270,7 @@
                </property>
               </widget>
              </item>
-             <item row="11" column="1">
+             <item row="15" column="1">
               <widget class="QEComboBox" name="qecombobox_14">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2277,16 +2289,6 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_65">
-               <property name="text">
-                <string>File Path</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="2">
               <widget class="QELabel" name="qelabel_43">
                <property name="variable" stdset="0">
@@ -2297,17 +2299,7 @@
                </property>
               </widget>
              </item>
-             <item row="8" column="0">
-              <widget class="QLabel" name="label_67">
-               <property name="text">
-                <string>Last Filename</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="2">
+             <item row="8" column="2">
               <widget class="QELabel" name="qelabel_78">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:AutoIncrement_RBV</string>
@@ -2317,7 +2309,7 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="2">
+             <item row="7" column="2">
               <widget class="QELabel" name="qelabel_76">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:FileNumber_RBV</string>
@@ -2327,7 +2319,7 @@
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
+             <item row="5" column="0">
               <widget class="QLabel" name="label_72">
                <property name="text">
                 <string>File Path Exists?</string>
@@ -2337,7 +2329,7 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="1">
+             <item row="7" column="1">
               <widget class="QELineEdit" name="qelineedit_19">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2353,23 +2345,7 @@
                </property>
               </widget>
              </item>
-             <item row="7" column="1" colspan="2">
-              <widget class="QELabel" name="qelabel_79">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="variable" stdset="0">
-                <string>$(P):TIFF1:FileTemplate_RBV</string>
-               </property>
-               <property name="variableSubstitutions" stdset="0">
-                <string>P=13PS7</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
+             <item row="6" column="1">
               <widget class="QELineEdit" name="qelineedit_12">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2385,7 +2361,7 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="1">
+             <item row="8" column="1">
               <widget class="QEComboBox" name="qecombobox_12">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2404,7 +2380,7 @@
                </property>
               </widget>
              </item>
-             <item row="5" column="0">
+             <item row="7" column="0">
               <widget class="QLabel" name="label_73">
                <property name="text">
                 <string>Next File</string>
@@ -2414,7 +2390,7 @@
                </property>
               </widget>
              </item>
-             <item row="12" column="1">
+             <item row="16" column="1">
               <widget class="QELineEdit" name="qelineedit_21">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2430,7 +2406,7 @@
                </property>
               </widget>
              </item>
-             <item row="10" column="2">
+             <item row="14" column="2">
               <widget class="QELabel" name="qelabel_82">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:AutoSave_RBV</string>
@@ -2440,7 +2416,7 @@
                </property>
               </widget>
              </item>
-             <item row="10" column="0">
+             <item row="14" column="0">
               <widget class="QLabel" name="label_69">
                <property name="text">
                 <string>Auto Save</string>
@@ -2450,29 +2426,7 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="1" colspan="2">
-              <widget class="QELabel" name="qelabel_69">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>445</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="variable" stdset="0">
-                <string>$(P):TIFF1:FilePath_RBV</string>
-               </property>
-               <property name="variableSubstitutions" stdset="0">
-                <string>P=13PS7</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="0">
+             <item row="15" column="0">
               <widget class="QLabel" name="label_70">
                <property name="text">
                 <string>Write Mode</string>
@@ -2482,23 +2436,7 @@
                </property>
               </widget>
              </item>
-             <item row="8" column="1" colspan="2">
-              <widget class="QELabel" name="qelabel_73">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="variable" stdset="0">
-                <string>$(P):TIFF1:FullFileName_RBV</string>
-               </property>
-               <property name="variableSubstitutions" stdset="0">
-                <string>P=13PS7</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="0">
+             <item row="16" column="0">
               <widget class="QLabel" name="label_71">
                <property name="text">
                 <string># to Capture</string>
@@ -2508,7 +2446,7 @@
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
+             <item row="6" column="0">
               <widget class="QLabel" name="label_63">
                <property name="text">
                 <string>File Name</string>
@@ -2518,7 +2456,7 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="8" column="0">
               <widget class="QLabel" name="label_74">
                <property name="text">
                 <string>Auto Increment</string>
@@ -2564,7 +2502,7 @@
                </property>
               </widget>
              </item>
-             <item row="13" column="1">
+             <item row="17" column="1">
               <layout class="QGridLayout" name="gridLayout_22">
                <item row="0" column="0">
                 <widget class="QEPushButton" name="qepushbutton_7">
@@ -2584,7 +2522,7 @@
                </item>
               </layout>
              </item>
-             <item row="3" column="2">
+             <item row="5" column="2">
               <widget class="QELabel" name="qelabel_74">
                <property name="variable" stdset="0">
                 <string>$(P):TIFF1:FilePathExists_RBV</string>
@@ -2607,7 +2545,7 @@
                </property>
               </widget>
              </item>
-             <item row="10" column="1">
+             <item row="14" column="1">
               <widget class="QEComboBox" name="qecombobox_13">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -2623,16 +2561,6 @@
                </property>
                <property name="subscribe">
                 <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="0">
-              <widget class="QLabel" name="label_75">
-               <property name="text">
-                <string>Filename Format</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                </property>
               </widget>
              </item>
@@ -2655,13 +2583,19 @@
                </property>
               </widget>
              </item>
-             <item row="12" column="2">
+             <item row="16" column="2">
               <layout class="QHBoxLayout" name="horizontalLayout_5">
                <item>
                 <widget class="QELabel" name="qelabel_83">
+                 <property name="minimumSize">
+                  <size>
+                   <width>65</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
-                   <width>40</width>
+                   <width>16777215</width>
                    <height>16777215</height>
                   </size>
                  </property>
@@ -2688,7 +2622,7 @@
                </item>
               </layout>
              </item>
-             <item row="13" column="2">
+             <item row="17" column="2">
               <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
                 <widget class="QELabel" name="qelabel_80">
@@ -2720,6 +2654,12 @@
                </item>
                <item>
                 <widget class="QELabel" name="qelabel_75">
+                 <property name="minimumSize">
+                  <size>
+                   <width>65</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="variable" stdset="0">
                   <string>$(P):TIFF1:WriteFile_RBV</string>
                  </property>
@@ -2741,54 +2681,167 @@
                  </property>
                 </spacer>
                </item>
+               <item>
+                <widget class="QEPushButton" name="qepushbutton_12">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Autofill</string>
+                 </property>
+                 <property name="variableSubstitutions" stdset="0">
+                  <string>P=13PS7</string>
+                 </property>
+                 <property name="program">
+                  <string>/afs/slac/g/testfac/extras/scripts/autoFillTiff.sh</string>
+                 </property>
+                 <property name="arguments">
+                  <stringlist>
+                   <string>$(P)</string>
+                  </stringlist>
+                 </property>
+                 <property name="guiFile" stdset="0">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </item>
-             <item row="14" column="1">
-              <widget class="QGroupBox" name="groupBox_4">
+             <item row="9" column="1">
+              <widget class="QELineEdit" name="qelineedit_17">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
-               <property name="title">
-                <string/>
+               <property name="variable" stdset="0">
+                <string>$(P):TIFF1:FileTemplate</string>
                </property>
-               <layout class="QGridLayout" name="gridLayout_25">
-                <item row="0" column="0">
-                 <widget class="QEPushButton" name="qepushbutton_12">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Autofill</string>
-                  </property>
-                  <property name="variableSubstitutions" stdset="0">
-                   <string>P=13PS7</string>
-                  </property>
-                  <property name="program">
-                   <string>/afs/slac/g/testfac/extras/scripts/autoFillTiff.sh</string>
-                  </property>
-                  <property name="arguments">
-                   <stringlist>
-                    <string>$(P)</string>
-                   </stringlist>
-                  </property>
-                  <property name="guiFile" stdset="0">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=13PS7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_65">
+               <property name="text">
+                <string>File Path</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="label_75">
+               <property name="text">
+                <string>Filename Format</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1" colspan="2">
+              <widget class="QELineEdit" name="qelineedit_14">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>440</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):TIFF1:FilePath</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=13PS7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0" colspan="3">
+              <widget class="QELabel" name="qelabel_69">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>445</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):TIFF1:FilePath_RBV</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=13PS7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="0">
+              <widget class="QLabel" name="label_67">
+               <property name="text">
+                <string>Last Filename</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="2">
+              <widget class="QELabel" name="qelabel_79">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):TIFF1:FileTemplate_RBV</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=13PS7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="1" colspan="2">
+              <widget class="QELabel" name="qelabel_73">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>440</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):TIFF1:FullFileName_RBV</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=13PS7</string>
+               </property>
               </widget>
              </item>
             </layout>
@@ -3654,18 +3707,21 @@
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>60</width>
+                   <width>0</width>
                    <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>100</width>
+                   <width>60</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="text">
                   <string>Power:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
                </item>
