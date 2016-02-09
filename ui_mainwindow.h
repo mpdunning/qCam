@@ -199,6 +199,15 @@ public:
     QEPushButton *qepushbutton_31;
     QSpacerItem *horizontalSpacer_13;
     QLabel *label_90;
+    QLabel *label_91;
+    QHBoxLayout *horizontalLayout_13;
+    QEPushButton *qepushbutton_35;
+    QEPushButton *qepushbutton_36;
+    QSpacerItem *horizontalSpacer_16;
+    QHBoxLayout *horizontalLayout_14;
+    QSpacerItem *horizontalSpacer_18;
+    QEPushButton *qepushbutton_39;
+    QEPushButton *qepushbutton_38;
     QSpacerItem *horizontalSpacer_15;
     QSpacerItem *verticalSpacer_9;
     QWidget *Tiff;
@@ -1333,6 +1342,66 @@ public:
 
         gridLayout_23->addWidget(label_90, 5, 0, 1, 1);
 
+        label_91 = new QLabel(groupBox_9);
+        label_91->setObjectName(QStringLiteral("label_91"));
+        label_91->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_23->addWidget(label_91, 6, 0, 1, 1);
+
+        horizontalLayout_13 = new QHBoxLayout();
+        horizontalLayout_13->setObjectName(QStringLiteral("horizontalLayout_13"));
+        qepushbutton_35 = new QEPushButton(groupBox_9);
+        qepushbutton_35->setObjectName(QStringLiteral("qepushbutton_35"));
+        sizePolicy2.setHeightForWidth(qepushbutton_35->sizePolicy().hasHeightForWidth());
+        qepushbutton_35->setSizePolicy(sizePolicy2);
+        qepushbutton_35->setMinimumSize(QSize(0, 0));
+        qepushbutton_35->setMaximumSize(QSize(40, 16777215));
+
+        horizontalLayout_13->addWidget(qepushbutton_35);
+
+        qepushbutton_36 = new QEPushButton(groupBox_9);
+        qepushbutton_36->setObjectName(QStringLiteral("qepushbutton_36"));
+        sizePolicy2.setHeightForWidth(qepushbutton_36->sizePolicy().hasHeightForWidth());
+        qepushbutton_36->setSizePolicy(sizePolicy2);
+        qepushbutton_36->setMinimumSize(QSize(0, 0));
+        qepushbutton_36->setMaximumSize(QSize(40, 16777215));
+
+        horizontalLayout_13->addWidget(qepushbutton_36);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_13->addItem(horizontalSpacer_16);
+
+
+        gridLayout_23->addLayout(horizontalLayout_13, 6, 1, 1, 1);
+
+        horizontalLayout_14 = new QHBoxLayout();
+        horizontalLayout_14->setObjectName(QStringLiteral("horizontalLayout_14"));
+        horizontalSpacer_18 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_14->addItem(horizontalSpacer_18);
+
+        qepushbutton_39 = new QEPushButton(groupBox_9);
+        qepushbutton_39->setObjectName(QStringLiteral("qepushbutton_39"));
+        sizePolicy2.setHeightForWidth(qepushbutton_39->sizePolicy().hasHeightForWidth());
+        qepushbutton_39->setSizePolicy(sizePolicy2);
+        qepushbutton_39->setMinimumSize(QSize(0, 0));
+        qepushbutton_39->setMaximumSize(QSize(5000, 16777215));
+
+        horizontalLayout_14->addWidget(qepushbutton_39);
+
+        qepushbutton_38 = new QEPushButton(groupBox_9);
+        qepushbutton_38->setObjectName(QStringLiteral("qepushbutton_38"));
+        sizePolicy2.setHeightForWidth(qepushbutton_38->sizePolicy().hasHeightForWidth());
+        qepushbutton_38->setSizePolicy(sizePolicy2);
+        qepushbutton_38->setMinimumSize(QSize(0, 0));
+        qepushbutton_38->setMaximumSize(QSize(5000, 16777215));
+
+        horizontalLayout_14->addWidget(qepushbutton_38);
+
+
+        gridLayout_23->addLayout(horizontalLayout_14, 6, 2, 1, 1);
+
         gridLayout_23->setColumnMinimumWidth(0, 110);
         gridLayout_23->setColumnMinimumWidth(1, 110);
         gridLayout_23->setColumnMinimumWidth(2, 110);
@@ -2386,8 +2455,8 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "qCam", 0));
         actionQuit->setText(QApplication::translate("MainWindow", "Quit", 0));
         qeimage_qCam->setProperty("imageVariable", QVariant(QApplication::translate("MainWindow", "$(P):image1:ArrayData", 0)));
-        qeimage_qCam->setProperty("widthVariable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:ArraySizeX_RBV", 0)));
-        qeimage_qCam->setProperty("heightVariable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:ArraySizeY_RBV", 0)));
+        qeimage_qCam->setProperty("widthVariable", QVariant(QApplication::translate("MainWindow", "$(P):image1:ArraySize0_RBV", 0)));
+        qeimage_qCam->setProperty("heightVariable", QVariant(QApplication::translate("MainWindow", "$(P):image1:ArraySize1_RBV", 0)));
         qeimage_qCam->setProperty("regionOfInterest1XVariable", QVariant(QApplication::translate("MainWindow", "$(P):ROI1:MinX", 0)));
         qeimage_qCam->setProperty("regionOfInterest1YVariable", QVariant(QApplication::translate("MainWindow", "$(P):ROI1:MinY", 0)));
         qeimage_qCam->setProperty("regionOfInterest1WVariable", QVariant(QApplication::translate("MainWindow", "$(P):ROI1:SizeX", 0)));
@@ -2572,15 +2641,17 @@ public:
         tabWidget_qCam->setTabText(tabWidget_qCam->indexOf(Stats), QApplication::translate("MainWindow", "Stats", 0));
         groupBox_9->setTitle(QString());
         qepushbutton_32->setText(QApplication::translate("MainWindow", "On", 0));
-        qepushbutton_32->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/beamOverlay.sh", 0));
+        qepushbutton_32->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_32->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "BEAM", 0)
             << QApplication::translate("MainWindow", "--enable", 0));
         qepushbutton_32->setProperty("guiFile", QVariant(QString()));
         qepushbutton_33->setText(QApplication::translate("MainWindow", "Off", 0));
-        qepushbutton_33->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/beamOverlay.sh", 0));
+        qepushbutton_33->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_33->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "BEAM", 0)
             << QApplication::translate("MainWindow", "--disable", 0));
         qepushbutton_33->setProperty("guiFile", QVariant(QString()));
         qelabel_77->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):Over1:NDArrayPort_RBV", 0)));
@@ -2598,31 +2669,64 @@ public:
         qelabel_44->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=13PS7", 0)));
         label_87->setText(QApplication::translate("MainWindow", "Centroid Overlay", 0));
         qepushbutton_27->setText(QApplication::translate("MainWindow", "On", 0));
-        qepushbutton_27->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/centroidOverlay.sh", 0));
+        qepushbutton_27->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_27->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "CENTROID", 0)
             << QApplication::translate("MainWindow", "--enable", 0));
         qepushbutton_27->setProperty("guiFile", QVariant(QString()));
         qepushbutton_28->setText(QApplication::translate("MainWindow", "Off", 0));
-        qepushbutton_28->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/centroidOverlay.sh", 0));
+        qepushbutton_28->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_28->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "CENTROID", 0)
             << QApplication::translate("MainWindow", "--disable", 0));
         qepushbutton_28->setProperty("guiFile", QVariant(QString()));
         label_89->setText(QApplication::translate("MainWindow", "Target Overlay", 0));
         qepushbutton_30->setText(QApplication::translate("MainWindow", "On", 0));
-        qepushbutton_30->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/targetOverlay.sh", 0));
+        qepushbutton_30->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_30->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "TARGET", 0)
             << QApplication::translate("MainWindow", "--enable", 0));
         qepushbutton_30->setProperty("guiFile", QVariant(QString()));
         qepushbutton_31->setText(QApplication::translate("MainWindow", "Off", 0));
-        qepushbutton_31->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/targetOverlay.sh", 0));
+        qepushbutton_31->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
         qepushbutton_31->setArguments(QStringList()
             << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "TARGET", 0)
             << QApplication::translate("MainWindow", "--disable", 0));
         qepushbutton_31->setProperty("guiFile", QVariant(QString()));
         label_90->setText(QApplication::translate("MainWindow", "Beam Overlay", 0));
+        label_91->setText(QApplication::translate("MainWindow", "ROI1 Overlay", 0));
+        qepushbutton_35->setText(QApplication::translate("MainWindow", "On", 0));
+        qepushbutton_35->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
+        qepushbutton_35->setArguments(QStringList()
+            << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "ROI1", 0)
+            << QApplication::translate("MainWindow", "--enable", 0));
+        qepushbutton_35->setProperty("guiFile", QVariant(QString()));
+        qepushbutton_36->setText(QApplication::translate("MainWindow", "Off", 0));
+        qepushbutton_36->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
+        qepushbutton_36->setArguments(QStringList()
+            << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "ROI1", 0)
+            << QApplication::translate("MainWindow", "--disable", 0));
+        qepushbutton_36->setProperty("guiFile", QVariant(QString()));
+        qepushbutton_39->setText(QApplication::translate("MainWindow", "Set ROI", 0));
+        qepushbutton_39->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
+        qepushbutton_39->setArguments(QStringList()
+            << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "ROI1", 0)
+            << QApplication::translate("MainWindow", "--setROI", 0));
+        qepushbutton_39->setProperty("guiFile", QVariant(QString()));
+        qepushbutton_38->setText(QApplication::translate("MainWindow", "Unset ROI", 0));
+        qepushbutton_38->setProgram(QApplication::translate("MainWindow", "/afs/slac/g/testfac/extras/scripts/ADOverlay.sh", 0));
+        qepushbutton_38->setArguments(QStringList()
+            << QApplication::translate("MainWindow", "$(P)", 0)
+            << QApplication::translate("MainWindow", "ROI1", 0)
+            << QApplication::translate("MainWindow", "--unsetROI", 0));
+        qepushbutton_38->setProperty("guiFile", QVariant(QString()));
         tabWidget_qCam->setTabText(tabWidget_qCam->indexOf(Overlay), QApplication::translate("MainWindow", "Overlay", 0));
         groupBox_3->setTitle(QString());
         qelabel_72->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):TIFF1:FileName_RBV", 0)));

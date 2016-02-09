@@ -82,10 +82,10 @@
            <string>$(P):image1:ArrayData</string>
           </property>
           <property name="widthVariable" stdset="0">
-           <string>$(P):cam1:ArraySizeX_RBV</string>
+           <string>$(P):image1:ArraySize0_RBV</string>
           </property>
           <property name="heightVariable" stdset="0">
-           <string>$(P):cam1:ArraySizeY_RBV</string>
+           <string>$(P):image1:ArraySize1_RBV</string>
           </property>
           <property name="regionOfInterest1XVariable" stdset="0">
            <string>$(P):ROI1:MinX</string>
@@ -1817,11 +1817,12 @@
                     <string>On</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/beamOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>BEAM</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -1854,11 +1855,12 @@
                     <string>Off</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/beamOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>BEAM</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -2013,11 +2015,12 @@
                     <string>On</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/centroidOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>CENTROID</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -2050,11 +2053,12 @@
                     <string>Off</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/centroidOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>CENTROID</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -2114,11 +2118,12 @@
                     <string>On</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/targetOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>TARGET</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -2151,11 +2156,12 @@
                     <string>Off</string>
                    </property>
                    <property name="program">
-                    <string>/afs/slac/g/testfac/extras/scripts/targetOverlay.sh</string>
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
                    </property>
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
+                     <string>TARGET</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -2188,6 +2194,202 @@
                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                  </property>
                 </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_91">
+                 <property name="text">
+                  <string>ROI1 Overlay</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_35">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>On</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>ROI1</string>
+                     <string>--enable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_36">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Off</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>ROI1</string>
+                     <string>--disable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="6" column="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <spacer name="horizontalSpacer_18">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_39">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>5000</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Set ROI</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>ROI1</string>
+                     <string>--setROI</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_38">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>5000</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Unset ROI</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADOverlay.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>ROI1</string>
+                     <string>--unsetROI</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </item>
               </layout>
              </item>
